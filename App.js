@@ -7,12 +7,16 @@ import SumButton from './components/SumButton'
 export default function App() {
   return (
     <View style={styles.container}>
-      <StatusBar style="auto" />
-      <NumberBox />
-      <NumberBox />
-      <NumberBox />
-      <SumButton />
-      <SumResult result={0} />
+      <View style={{alignItems: 'flex-end'}}>
+        <StatusBar style="auto" />
+        <NumberBox textStyle={styles.texts}/>
+        <NumberBox textStyle={styles.texts}/>
+        <View style={{flexDirection: 'row'}}>
+          <SumButton textStyle={styles.texts}/>
+          <NumberBox textStyle={styles.texts}/>
+        </View>
+        <SumResult result={0} textStyle={styles.texts}/>
+      </View>
     </View>
   );
 }
@@ -20,8 +24,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'ivory',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  texts: {
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    includeFontPadding: false,
+    fontSize: 36,
+    margin: 2,
+    height: 50,
+    color: 'black'
+  }
 });

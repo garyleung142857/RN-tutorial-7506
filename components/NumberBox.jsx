@@ -1,11 +1,18 @@
 import React from 'react'
-import { TextInput } from 'react-native'
+import { TextInput, StyleSheet } from 'react-native'
 
-export default NumberBox = ({}) => {
+export default NumberBox = ({textStyle}) => {
   return (
     <TextInput
-      style={{backgroundColor: 'lightgrey', margin: 2}}
+      style={[styles.inputText, textStyle]}
       keyboardType="numeric"
     />
   )
 }
+
+const styles = StyleSheet.create({
+  inputText: {
+    backgroundColor: 'lightgrey',
+    minWidth: 150
+  }
+})

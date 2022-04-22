@@ -1,10 +1,17 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text , StyleSheet } from 'react-native'
 
-export default NumberBox = ({result}) => {
+export default NumberBox = ({result, textStyle}) => {
   return (
     <Text
-      style={{backgroundColor: 'lightblue', margin: 2}}
+      style={[styles.resultText, textStyle]}
     > {result} </Text>
   )
 }
+
+const styles = StyleSheet.create({
+  resultText: {
+    backgroundColor: 'lightblue',
+    minWidth: 150
+  }
+})

@@ -30,11 +30,14 @@ export default function App() {
     <View style={styles.container}>
       <View style={{alignItems: 'flex-end'}}>
         <StatusBar style="auto" />
-        <NumberBox num={numArr[0]} onChange={v => strToNum(0, v)} textStyle={styles.texts}/>
-        <NumberBox num={numArr[1]} onChange={v => strToNum(1, v)} textStyle={styles.texts}/>
+        <NumberBox num={numArr[0]} onChange={v => strToNum(0, v)}
+          textStyle={styles.texts}/>
+        <NumberBox num={numArr[1]} onChange={v => strToNum(1, v)} 
+          textStyle={styles.texts}/>
         <View style={{flexDirection: 'row'}}>
           <SumButton onPressBtn={onPressBtn} textStyle={styles.texts}/>
-          <NumberBox num={numArr[2]} onChange={v => strToNum(2, v)} textStyle={styles.texts}/>
+          <NumberBox num={numArr[2]} onChange={v => strToNum(2, v)} 
+            textStyle={styles.texts}/>
         </View>
         <SumResult result={sum} textStyle={styles.texts}/>
       </View>

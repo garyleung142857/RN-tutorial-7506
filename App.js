@@ -1,7 +1,8 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, Text, View } from 'react-native'
 import NumberBox from './components/NumberBox'
-import SumResult from './components/SumResult';
+import SumResult from './components/SumResult'
+import SumButton from './components/SumButton'
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <NumberBox />
       <NumberBox />
       <NumberBox />
+      <SumButton />
       <SumResult result={0} />
     </View>
   );
